@@ -1,4 +1,4 @@
-# video
+# [video] (https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Using_HTML5_audio_and_video)
 
 # autoplay 视频就绪立即播放 
 
