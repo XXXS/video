@@ -53,31 +53,35 @@
 ## 使用Flash播放
  ### <video> 标签不被支持时可以使用Flash播放Flash格式的影像
 
-  ```   <video src="video.ogv" controls>
+  ```  
+   <video src="video.ogv" controls>
         <object data="flvplayer.swf" type="application/x-shockwave-flash">
-      <param value="flvplayer.swf" name="movie"/>
-     </object>
+          <param value="flvplayer.swf" name="movie"/>
+        </object>
     </video>
 
 ```
  ## 没有资源可用是显示备用内容
-```` <video controls>
+```
+ <video controls>
   <source src="dynamicsearch.mp4" type="video/mp4"></source>
-  <a href="dynamicsearch.mp4">
+   <a href="dynamicsearch.mp4">
     <img src="dynamicsearch.jpg" alt="Dynamic app search in Firefox OS">
-  </a>
+   </a>
   <p>点击图片播放动态应用搜索的视频演示</p>
-</video>
+ </video>
 ```
+
+
 ```
-<script>
- var v = document.querySelector('video'),
+  var v = document.querySelector('video'),
     sources = v.querySelectorAll('source'),
     lastsource = sources[sources.length-1];
-lastsource.addEventListener('error', function(ev) {
-  var d = document.createElement('div');
-  d.innerHTML = v.innerHTML;
-  v.parentNode.replaceChild(d, v);
-}, false);
-</script>
+
+   lastsource.addEventListener('error', function(ev) {
+      var d = document.createElement('div');
+      d.innerHTML = v.innerHTML;
+     v.parentNode.replaceChild(d, v);
+    }, false);
+
 ```
