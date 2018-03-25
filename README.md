@@ -53,16 +53,16 @@
 ## 使用Flash播放
  ### <video> 标签不被支持时可以使用Flash播放Flash格式的影像
 
-
+'
   <video src="video.ogv" controls>
     <object data="flvplayer.swf" type="application/x-shockwave-flash">
       <param value="flvplayer.swf" name="movie"/>
    </object>
  </video>
 
-
+'
  ## 没有资源可用是显示备用内容
- 
+ "
  <video controls>
   <source src="dynamicsearch.mp4" type="video/mp4"></source>
   <a href="dynamicsearch.mp4">
@@ -70,7 +70,8 @@
   </a>
   <p>点击图片播放动态应用搜索的视频演示</p>
 </video>
-
+"
+"
 <script>
  var v = document.querySelector('video'),
     sources = v.querySelectorAll('source'),
@@ -81,3 +82,4 @@ lastsource.addEventListener('error', function(ev) {
   v.parentNode.replaceChild(d, v);
 }, false);
 </script>
+"
