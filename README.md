@@ -1,5 +1,4 @@
-#  [video] 
-(https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Using_HTML5_audio_and_video)
+#  [video](https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Using_HTML5_audio_and_video)
 
 # autoplay 视频就绪立即播放 
 
@@ -28,9 +27,9 @@
  ##  document.getElementById('demo').volume-=0.1 降低音量 
  ## 停止媒体下载  
  -  var mediaElement = document.getElementById("myMediaElementID");
- - mediaElement.pause();
- - mediaElement.src='';
- - mediaElement.removeAttribute("src"); 
+ -  mediaElement.pause();
+ -  mediaElement.src='';
+ -  mediaElement.removeAttribute("src"); 
 
  ## 播放时间 
 
@@ -53,11 +52,13 @@
 
 ## 使用Flash播放
  ### <video> 标签不被支持时可以使用Flash播放Flash格式的影像
- - <video src="video.ogv" controls>
- -    <object data="flvplayer.swf" type="application/x-shockwave-flash">
- -     <param value="flvplayer.swf" name="movie"/>
- -   </object>
- - </video>
+
+
+  <video src="video.ogv" controls>
+    <object data="flvplayer.swf" type="application/x-shockwave-flash">
+      <param value="flvplayer.swf" name="movie"/>
+   </object>
+ </video>
 
 
  ## 没有资源可用是显示备用内容
@@ -67,8 +68,10 @@
   <a href="dynamicsearch.mp4">
     <img src="dynamicsearch.jpg" alt="Dynamic app search in Firefox OS">
   </a>
-  <p>Click image to play a video demo of dynamic app search</p>
+  <p>点击图片播放动态应用搜索的视频演示</p>
 </video>
+
+<script>
  var v = document.querySelector('video'),
     sources = v.querySelectorAll('source'),
     lastsource = sources[sources.length-1];
@@ -77,3 +80,4 @@ lastsource.addEventListener('error', function(ev) {
   d.innerHTML = v.innerHTML;
   v.parentNode.replaceChild(d, v);
 }, false);
+</script>
