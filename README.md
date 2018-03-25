@@ -1,4 +1,5 @@
-# [video] (https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Using_HTML5_audio_and_video)
+#  [video] 
+(https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Using_HTML5_audio_and_video)
 
 # autoplay 视频就绪立即播放 
 
@@ -61,14 +62,14 @@
 
  ## 没有资源可用是显示备用内容
  
- >  <video controls>
+ <video controls>
   <source src="dynamicsearch.mp4" type="video/mp4"></source>
   <a href="dynamicsearch.mp4">
     <img src="dynamicsearch.jpg" alt="Dynamic app search in Firefox OS">
   </a>
   <p>Click image to play a video demo of dynamic app search</p>
 </video>
-> var v = document.querySelector('video'),
+ var v = document.querySelector('video'),
     sources = v.querySelectorAll('source'),
     lastsource = sources[sources.length-1];
 lastsource.addEventListener('error', function(ev) {
