@@ -1,37 +1,37 @@
 #  [video](https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Using_HTML5_audio_and_video)
 
-# autoplay 视频就绪立即播放 
+-  autoplay 视频就绪立即播放 
 
-# controls  显示用户控件 播放 音量 下载 
+- controls  显示用户控件 播放 音量 下载 
 
-# height / width  设置播放器的宽高
+- height / width  设置播放器的宽高
 
-# loop  重复播放
+- loop  重复播放
 
-# muted  静音 
+- muted  静音 
 
-# poster  默认显示的图片 
+- poster  默认显示的图片 
 
-# preload  (auto | metadata | none ) 
+- preload  (auto | metadata | none ) 
 
  - 页面加载时进行加载 预备播放  如果使用autoplay 则该忽略该属性 
 
-#  src 视频路径 
+-  src 视频路径 
 
-#   playsinline (true | false) iphone Safari 视频禁止全屏 
+-   playsinline (true | false) iphone Safari 视频禁止全屏 
 
-#  播放控制  
- ## document.getElementById('demo').play()  播放声音 
- ## document.getElementById('demo').pause() 暂停声音 
- ## document.getElementById('demo').volume+=0.1 提高音量 
- ##  document.getElementById('demo').volume-=0.1 降低音量 
+##  播放控制  
+ - document.getElementById('demo').play()  播放声音 
+ - document.getElementById('demo').pause() 暂停声音 
+ - document.getElementById('demo').volume+=0.1 提高音量 
+ -  document.getElementById('demo').volume-=0.1 降低音量 
  ## 停止媒体下载  
  -  var mediaElement = document.getElementById("myMediaElementID");
  -  mediaElement.pause();
  -  mediaElement.src='';
  -  mediaElement.removeAttribute("src"); 
 
- ## 播放时间 
+ ## 播放时间控制 
 
   - var mediaElement = document.getElementById('mediaElementID');
   - mediaElement.seekable.start();  // 返回开始时间 (in seconds)
@@ -51,7 +51,7 @@
  - 指定视频从第60秒播放到结束.
 
 ## 使用Flash播放
- ### <video> 标签不被支持时可以使用Flash播放Flash格式的影像
+ #### <video> 标签不被支持时可以使用Flash播放Flash格式的影像
 
   ```  
    <video src="video.ogv" controls>
@@ -61,7 +61,7 @@
     </video>
 
 ```
- ## 没有资源可用是显示备用内容
+ ## 没有资源可用时显示备用内容
 ```
  <video controls>
   <source src="dynamicsearch.mp4" type="video/mp4"></source>
